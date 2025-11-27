@@ -1,6 +1,7 @@
 import requests
 
 def test_edit():
+    ''' Создала задачу, изменила и перепроверила'''
     body = {"title": "generated", "completed": False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     id = response.json()["id"]
